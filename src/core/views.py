@@ -6,9 +6,13 @@ def index(request):
     return render(request, 'index.html', {})
 
 
+def dashboard(request):
+    return render(request, 'dashboard.html', {})
+
+
 def products(request):
-    return HttpResponse('products')
+    return render(request, 'products.html', {})
 
 
 def customer(request):
-    return HttpResponse('customer')
+    return render(request, 'customer.html', {})
