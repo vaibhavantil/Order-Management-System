@@ -1,14 +1,6 @@
-# django_boilerplate
+# Order-Management-System
 
-A basic django boilerplate project to make it easier to get started with a new project
+This is a full-stack django, bootsstrap project built for managing customer product orders and delivery status.
+It stores customer information in a database, like a CRM, Users have the ability to create customers, products and customer orders, along with viewing customer profile and editing customer information with full CRUD functionality.
 
-#STEPS TO USE THIS BOILERPLATE PROJECT
-
-1. Download the code
-2. Create a new or activate an existing virtual env depending on your usecase
-3. Install the dependencies listed in the requirements.txt file
-4. Rename project from demo to your prefered name with
-   \$ python manage.py rename name_of_your_app
-5. Use core as your base app and do the necessesary project setup
-6. Develop your project: Use existing template, and static directories
-7. Sett up for deploying : Uncomment the gitignore for the .env file
+The system will also have the ability to search customer and order information using a multi-parameter search form, complete with login authentication, password resetting and clear permission decorators.
