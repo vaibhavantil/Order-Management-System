@@ -9,12 +9,20 @@
       <br />
       <table class="table table-sm">
         <tr>
+          <th></th>
           <th>Customer</th>
           <th>Phone</th>
           <!-- <th>Orders</th> -->
         </tr>
         {% for customer in customers%}
         <tr>
+          <td>
+            <a
+              class="btn btn-sm btn-info"
+              href="{% url 'customer' customer.id %}"
+              >View</a
+            >
+          </td>
           <td>{{customer.name}}</td>
           <td>{{customer.phone}}</td>
         </tr>
@@ -42,8 +50,8 @@
           <td>{{order.product}}</td>
           <td>{{order.date_created}}</td>
           <td>{{order.status}}</td>
-          <td><a href="">Update</a></td>
-          <td><a href="">Delete</a></td>
+          <td><a class="btn btn-sm btn-info" href="">Update</a></td>
+          <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
         </tr>
         {% endfor %}
       </table>
