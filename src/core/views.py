@@ -37,5 +37,13 @@ def products(request):
     return render(request, 'products.html', context)
 
 
-def customer(request):
-    return render(request, 'customer.html', {})
+def customer(request, pk):
+    customer = Customer.objects.get(id=pk)
+    orders = customer.order_set.all()
+    order_count = orders.count()
+    context = {'customer': customer,
+               'orders': orders, 'order_count': order_count}
+    return render(request, 'customer.html', context)
+
+
+# reached 6:28  on dynamic url routing
